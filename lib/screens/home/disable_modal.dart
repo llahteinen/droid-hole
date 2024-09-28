@@ -66,22 +66,22 @@ class _DisableModalState extends State<DisableModal> {
   int _getTime() {
     switch (selectedOption) {
       case 0:
-        return 30;
+        return 30; /// seconds30
 
       case 1:
-        return 60;
+        return 120; /// minutes2
 
       case 2:
-        return 120;
+        return 600; /// minutes10
 
       case 3:
-        return 300;
+        return 3600; /// hours1
 
       case 4:
-        return 0;
+        return 0; /// indefinitely
 
       case 5:
-        return int.parse(customTimeController.text)*60;
+        return int.parse(customTimeController.text)*60; /// custom
 
       default:
         return 0;
@@ -165,7 +165,7 @@ class _DisableModalState extends State<DisableModal> {
                         ? Theme.of(context).colorScheme.onSecondaryContainer
                         : Theme.of(context).colorScheme.onSurfaceVariant
                     ),
-                    child: Text(AppLocalizations.of(context)!.minute1),
+                    child: Text(AppLocalizations.of(context)!.minutes2),
                   ),
                 ),
               ),
@@ -189,7 +189,7 @@ class _DisableModalState extends State<DisableModal> {
                         ? Theme.of(context).colorScheme.onSecondaryContainer
                         : Theme.of(context).colorScheme.onSurfaceVariant
                     ),
-                    child: Text(AppLocalizations.of(context)!.minutes2),
+                    child: Text(AppLocalizations.of(context)!.minutes10),
                   ),
                 ),
               ),
@@ -213,7 +213,7 @@ class _DisableModalState extends State<DisableModal> {
                         ? Theme.of(context).colorScheme.onSecondaryContainer
                         : Theme.of(context).colorScheme.onSurfaceVariant
                     ),
-                    child: Text(AppLocalizations.of(context)!.minutes5),
+                    child: Text(AppLocalizations.of(context)!.hours1),
                   ),
                 ),
               ),

@@ -21,6 +21,8 @@
     "minute1": "1 minute",
     "minutes2": "2 minutes",
     "minutes5": "5 minutes",
+    "minutes10": "10 minutes",
+    "hours1": "1 hour",
     "indefinitely": "Indefinitely",
     "custom": "Custom",
     "customMinutes": "Custom minutes",

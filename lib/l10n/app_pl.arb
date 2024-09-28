@@ -21,6 +21,8 @@
     "minute1": "1 minute",
     "minutes2": "2 minuty",
     "minutes5": "5 minut",
+    "minutes10": "10 minut",
+    "hours1": "1 godzina",
     "indefinitely": "Bezterminowo",
     "custom": "Niestandardowo",
     "customMinutes": "Na ile minut?",
