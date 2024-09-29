@@ -15,6 +15,7 @@ import 'package:droid_hole/screens/home/home_appbar.dart';
 
 import 'package:droid_hole/functions/server_management.dart';
 import 'package:droid_hole/constants/enums.dart';
+import 'package:droid_hole/constants/colors.dart';
 import 'package:droid_hole/providers/app_config_provider.dart';
 import 'package:droid_hole/functions/refresh_server_status.dart';
 import 'package:droid_hole/functions/conversions.dart';
@@ -97,8 +98,8 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: HomeTile(
                       icon: Icons.public, 
-                      iconColor: const Color.fromARGB(255, 64, 146, 66), 
-                      color: Colors.green, 
+                      iconColor: droid_darkblue,
+                      color: droid_blue,
                       label: AppLocalizations.of(context)!.totalQueries, 
                       value: intFormat(statusProvider.getRealtimeStatus!.dnsQueriesToday,Platform.localeName),
                     ),
@@ -110,8 +111,8 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: HomeTile(
                       icon: Icons.block, 
-                      iconColor: const Color.fromARGB(255, 28, 127, 208), 
-                      color: Colors.blue, 
+                      iconColor: droid_darkred,
+                      color: droid_red,
                       label: AppLocalizations.of(context)!.queriesBlocked, 
                       value: intFormat(statusProvider.getRealtimeStatus!.adsBlockedToday, Platform.localeName),
                     ),
@@ -123,8 +124,8 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: HomeTile(
                       icon: Icons.pie_chart, 
-                      iconColor: const Color.fromARGB(255, 219, 131, 0), 
-                      color: Colors.orange, 
+                      iconColor: droid_darkorange,
+                      color: droid_orange,
                       label: AppLocalizations.of(context)!.percentageBlocked, 
                       value: "${formatPercentage(statusProvider.getRealtimeStatus!.adsPercentageToday, Platform.localeName)}%",
                     ),
@@ -136,8 +137,8 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: HomeTile(
                       icon: Icons.list, 
-                      iconColor: const Color.fromARGB(255, 211, 58, 47), 
-                      color: Colors.red, 
+                      iconColor: droid_darkgreen,
+                      color: droid_green,
                       label: AppLocalizations.of(context)!.domainsAdlists, 
                       value: intFormat(statusProvider.getRealtimeStatus!.domainsBeingBlocked, Platform.localeName),
                     ),
