@@ -327,10 +327,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_app_lock
-      sha256: ca5c35058d490e2f957c36698abc61848b100b9adc02927970ec0e1b27bb2763
+      sha256: c3ca4251259156e7f9941fba2e4c2c891ea7e54ab10ec47a431f05dc80014c8e
       url: "https://pub.dev"
     source: hosted
-    version: "4.1.1+1"
+    version: "4.0.1"
   flutter_displaymode:
     dependency: "direct main"
     description:
