@@ -38,6 +38,12 @@ class _DisableModalState extends State<DisableModal> {
     });
   }
 
+  void _selectRadioValue(value) {
+    _updateRadioValue(value);
+    Navigator.pop(context);
+    widget.onDisable(_getTime());
+  }
+
   void _validateCustomMinutes(value) {
     if (int.tryParse(value) != null) {
       setState(() {
@@ -123,6 +129,7 @@ class _DisableModalState extends State<DisableModal> {
               ),
             ],
           ),
+          /// 30 seconds
           FractionallySizedBox(
             widthFactor: 0.5,
             child: Container(
@@ -130,7 +137,7 @@ class _DisableModalState extends State<DisableModal> {
               child: OptionBox(
                 optionsValue: selectedOption,
                 itemValue: 0,
-                onTap: _updateRadioValue,
+                onTap: _selectRadioValue,
                 child: Center(
                   child: AnimatedDefaultTextStyle(
                     duration: const Duration(milliseconds: 250),
@@ -147,6 +154,7 @@ class _DisableModalState extends State<DisableModal> {
               ),
             ),
           ),
+          /// 2 minutes
           FractionallySizedBox(
             widthFactor: 0.5,
             child: Container(
@@ -154,7 +162,7 @@ class _DisableModalState extends State<DisableModal> {
               child: OptionBox(
                 optionsValue: selectedOption,
                 itemValue: 1,
-                onTap: _updateRadioValue,
+                onTap: _selectRadioValue,
                 child: Center(
                   child: AnimatedDefaultTextStyle(
                     duration: const Duration(milliseconds: 250),
@@ -171,6 +179,7 @@ class _DisableModalState extends State<DisableModal> {
               ),
             ),
           ),
+          /// 10 minutes
           FractionallySizedBox(
             widthFactor: 0.5,
             child: Container(
@@ -178,7 +187,7 @@ class _DisableModalState extends State<DisableModal> {
               child: OptionBox(
                 optionsValue: selectedOption,
                 itemValue: 2,
-                onTap: _updateRadioValue,
+                onTap: _selectRadioValue,
                 child: Center(
                   child: AnimatedDefaultTextStyle(
                     duration: const Duration(milliseconds: 250),
@@ -195,6 +204,7 @@ class _DisableModalState extends State<DisableModal> {
               ),
             ),
           ),
+          /// 1 hour
           FractionallySizedBox(
             widthFactor: 0.5,
             child: Container(
@@ -202,7 +212,7 @@ class _DisableModalState extends State<DisableModal> {
               child: OptionBox(
                 optionsValue: selectedOption,
                 itemValue: 3,
-                onTap: _updateRadioValue,
+                onTap: _selectRadioValue,
                 child: Center(
                   child: AnimatedDefaultTextStyle(
                     duration: const Duration(milliseconds: 250),
@@ -219,6 +229,7 @@ class _DisableModalState extends State<DisableModal> {
               ),
             ),
           ),
+          /// infinite
           FractionallySizedBox(
             widthFactor: 0.5,
             child: Container(
@@ -226,7 +237,7 @@ class _DisableModalState extends State<DisableModal> {
               child: OptionBox(
                 optionsValue: selectedOption,
                 itemValue: 4,
-                onTap: _updateRadioValue,
+                onTap: _selectRadioValue,
                 child: Center(
                   child: AnimatedDefaultTextStyle(
                     duration: const Duration(milliseconds: 250),
@@ -243,6 +254,7 @@ class _DisableModalState extends State<DisableModal> {
               ),
             ),
           ),
+          /// Custom
           FractionallySizedBox(
             widthFactor: 0.5,
             child: Container(
